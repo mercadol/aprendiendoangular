@@ -1,0 +1,17 @@
+<app-slider [nombre]="'Pagina aleatoria'"></app-slider>
+
+<div class="center">
+    <section id="content">
+        <h2>Este Una pagina Aleatoria</h2>
+    </section>
+    <app-sidebar></app-sidebar>
+</div>
+
+<div *ngIf="nombre; else nohayparametros">
+    <h3>El nombre es: {{nombre}}</h3>    
+</div>
+<ng-template #nohayparametros>
+    <h3>No hay datos para mostrar</h3>    
+</ng-template>
+
+<button (click)="redireccion()">Llevame al Formulario</button>
